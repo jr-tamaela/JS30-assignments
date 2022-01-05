@@ -1,21 +1,22 @@
-function playSound(e) {
-  const audio = document.querySelector(`audio[data-key='${e.keyCode}']`);
-  const key = document.querySelector(`.key[data-key='${e.keyCode}']`);
+const apps = [
+  { name: "Drum kit", link: "./apps/drum_kit/index.html" },
+  { name: "Js Clock", link: "./apps/js_clock/index.html" },
+  { name: "CSS variables", link: "./apps/css_variables/index.html" },
+];
 
-  //console.log(audio);
-  if (!audio) return;
-  audio.currentTime = 0;
-  audio.play();
-  //console.log(key);
-  key.classList.add("playing");
+const mainApp = document.getElementById("appContainer");
+
+function loopOverApps() {
+  for (let i = 0; i < apps.length; i++) {
+    const app = apps[i];
+
+    mainApp.innerHTML += `
+            <section>
+                <h2>${app.name}</h2>
+                <a href=${app.link}>View</a>
+            </section>
+        `;
+  }
 }
 
-function removeTransition(e) {
-  if (e.propertyName !== "transform") return;
-  this.classList.remove("playing");
-}
-
-const keys = document.querySelectorAll(".key");
-keys.forEach((key) => key.addEventListener("transitionend", removeTransition));
-
-window.addEventListener("keydown", playSound);
+loopOverApps();
