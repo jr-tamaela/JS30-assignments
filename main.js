@@ -3,6 +3,7 @@ const apps = [
   { name: "Js Clock", link: "./apps/js_clock/index.html" },
   { name: "CSS variables", link: "./apps/css_variables/index.html" },
   { name: "Array Cardio - Day 1", link: "./apps/array_cardio/index.html" },
+  { name: "Speech synthesis", link: "./apps/speech_synthesis/index.html" },
 ];
 
 const mainApp = document.getElementById("appContainer");
