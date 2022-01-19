@@ -8,16 +8,16 @@ const stopButton = document.querySelector("#stop");
 msg.text = document.querySelector('[name="text"]').value;
 
 // populateVoice() is a function that retrieves all available voices for the device.
-// Fill the dropdown with voices that include 'en' and
+// Fill the dropdown with voices that includes voice spoken in 'en'
 function populateVoices() {
   voices = this.getVoices();
   voicesDropdown.innerHTML = voices
-    .filter((voice) => voice.lang.includes("en")
+    //.filter((voice) => voice.lang.includes("en"))
     .map(
       (voice) =>
         `<option value="${voice.name}">${voice.name} (${voice.lang})</option>`
-    );
-  //.join("");
+    )
+    .join("");
 }
 
 function setVoice() {
