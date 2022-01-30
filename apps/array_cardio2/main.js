@@ -49,7 +49,7 @@ console.log({ allAdult });
 // });
 
 const comment = comments.find((comment) => {
-  return comment.id === 823423;
+  return comment.id === 2039842;
 });
 
 console.log(comment);
@@ -59,7 +59,7 @@ console.log(comment);
 // delete the comment with the ID of 823423
 
 const index = comments.findIndex((comment) => {
-  return comment.id === 823423;
+  return comment.id === 2039842;
 });
 console.log(index);
 

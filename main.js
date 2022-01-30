@@ -7,6 +7,7 @@ const apps = [
   { name: "Flex panels image gallery", link: "./apps/flex_panels/index.html" },
   { name: "Type ahead", link: "./apps/type_ahead/index.html" },
   { name: "Array Cardio - Day 2", link: "./apps/array_cardio2/index.html" },
+  { name: "Playing with HTML canvas", link: "./apps/html_canvas/index.html" },
 ];
 
 const mainApp = document.getElementById("appContainer");
